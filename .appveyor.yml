@@ -1,0 +1,48 @@
+os: Visual Studio 2017
+
+environment:
+  BOOST_ROOT: C:\Libraries\boost_1_67_0
+  BOOST_LIBRARYDIR: C:\Libraries\boost_1_67_0\lib64-msvc-14
+
+build_script:
+  - md build
+  - cd build
+  - cmake -G "Visual Studio 15 2017 Win64" ..
+  - MSBuild azur.sln /p:Configuration=Release /m
+
+after_build:
+  - if not defined APPVEYOR_REPO_TAG_NAME (set APPVEYOR_REPO_TAG_NAME=%APPVEYOR_REPO_COMMIT%)
+  - cd src\Release
+  - mkdir azur-%APPVEYOR_REPO_TAG_NAME%
+  - copy *.exe azur-%APPVEYOR_REPO_TAG_NAME%
+  - copy ..\..\..\LICENSE azur-%APPVEYOR_REPO_TAG_NAME%
+  - 7z a azur-%APPVEYOR_REPO_TAG_NAME%-windows.zip azur-%APPVEYOR_REPO_TAG_NAME%
+  - copy azur-%APPVEYOR_REPO_TAG_NAME%-windows.zip ..\..\..\
+
+artifacts:
+  - path: azur-$(APPVEYOR_REPO_TAG_NAME)-windows.zip
+    name: azurRelease
+
+deploy:
+  - provider: GitHub
+    auth_token:
+      secure: KFrN1rc9FJN3BEoX99whHEuK5iPHHLmDcZ1Ac7tgT9oR6AxyjL0B+XMQu4wqo+fK
+    artifact: azurRelease
+    draft: false
+    prerelease: false
+    on:
+      appveyor_repo_name: azur/azur
+      appveyor_repo_tag: true
+
+  - provider: S3
+    access_key_id:
+      secure: nVmSNpabdw1WcGdTTzxAEjza8j9icu89oyXbC8fZVuM=
+    secret_access_key:
+      secure: TpCxPp5npMRclcwHB3dhkd9ZsEgKstS6HOnQ1VR6YObEsaPyl5dr16ZdbsOgjykj
+    bucket: azur
+    region: us-east-2
+    set_public: true
+    folder: azur
+    artifact: azurRelease
+    on:
+      appveyor_repo_name: azur/azur
