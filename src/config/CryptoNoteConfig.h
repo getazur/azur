@@ -166,6 +166,10 @@ const char* const SEED_NODES[] = {
   "node-1.getazur.org:15250",
   "node-2.getazur.org:15250",
   "node-3.getazur.org:15250",
-  "node-4.getazur.org:15250"
+  "node-4.getazur.org:15250",
+  "node-5.getazur.org:15250",
+  "node-6.getazur.org:15250",
+  "node-7.getazur.org:15250",
+  "node-8.getazur.org:15250"
 };
 } // CryptoNote
