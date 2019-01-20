@@ -10,14 +10,14 @@ MAKE
 GIT
 GCC
 
-### Insall Prerequisites
+### Install Prerequisites
 
-#### Insall Prerequisites with script
+#### Install Prerequisites with script
 
     git clone https://github.com/getazur/azur.git && cd azur && chmod +x dep-linux.sh
     ./dep-linux.sh
     
-#### Insall Prerequisites without script
+#### Install Prerequisites without script
 
 - `sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y`
 - `sudo apt-get update`
