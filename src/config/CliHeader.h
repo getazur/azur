@@ -1,14 +1,8 @@
-// Copyright (c) 2018, The AZUR Developers, The TURTLECOIN Developers
-//
-// Please see the included LICENSE file for more information.
-
 #pragma once
-
 #include <sstream>
 #include <config/CryptoNoteConfig.h>
 #include <config/Ascii.h>
 #include <version.h>
-
 namespace CryptoNote
 {
   inline std::string getProjectCLIHeader()
