@@ -2,6 +2,8 @@
 
 ## LINUX
 
+https://github.com/getazur/azur/releases/download/v1.0/linux-cli.tar.gz
+
 ### Prerequisites
 
 BOOST
