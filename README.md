@@ -121,7 +121,7 @@ The binaries will be in the `src/Release` folder when you are complete.
 - `cd Release`
 - `azurd.exe --version`
 
-#### Raspberry Pi 3 B+
+## Raspberry Pi 3 B+
 The following images are known to work. Your operation system image **MUST** be 64 bit.
 
 ##### Known working images
@@ -147,7 +147,6 @@ The binaries will be in the `src` folder when you are complete.
 - `./azurd --version`
 
 #### Thanks
-Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, azur Community
 
 ```
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
