@@ -26,7 +26,7 @@ GCC
 - `sudo pip install cmake`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/getazur/azur`
+- `git clone https://github.com/getazur/azur.git & cd azur & mkdir build`
 
 ### Build
 
