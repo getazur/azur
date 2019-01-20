@@ -43,7 +43,7 @@ GCC
     
     
    
-#### OSX/Apple, using GCC
+## OSX/Apple, using GCC
 
 ##### Prerequisites
 
@@ -67,7 +67,7 @@ The binaries will be in the `src` folder when you are complete.
 - `cd src`
 - `./azurd --version`
 
-#### OSX/Apple, using Clang
+## OSX/Apple, using Clang
 
 ##### Prerequisites
 
@@ -92,7 +92,7 @@ The binaries will be in the `src` folder when you are complete.
 - `./azurd --version`
 
 
-#### Windows
+## Windows
 
 ##### Prerequisites
 
