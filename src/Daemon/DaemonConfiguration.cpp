@@ -236,7 +236,7 @@ namespace DaemonConfig{
         config.feeAddress = cli["fee-address"].as<std::string>();
       }
 
-      if (cli.count("fee-amount") < 11)
+      if (cli.count("fee-amount") > 0)
       {
         config.feeAmount = cli["fee-amount"].as<int>();
       }
