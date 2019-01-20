@@ -1,13 +1,10 @@
 #pragma once
-
 #include <cstddef>
 #include <initializer_list>
-
-namespace CryptoNote {
-struct CheckpointData {
-  uint32_t index;
-  const char* blockId;
-};
+namespace CryptoNote 
+{
+struct CheckpointData 
+{uint32_t index;const char* blockId;};
   
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
 {          0, "22fba2b21c776e6171e1045834cc2187d75901d1983c7a9d6a37f296d1b3830e"},	
