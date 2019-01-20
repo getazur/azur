@@ -236,7 +236,7 @@ namespace DaemonConfig{
         config.feeAddress = cli["fee-address"].as<std::string>();
       }
 
-      if (cli.count("fee-amount") > 0)
+      if (cli.count("fee-amount") < 11)
       {
         config.feeAmount = cli["fee-amount"].as<int>();
       }
@@ -492,6 +492,7 @@ namespace DaemonConfig{
             throw std::runtime_error(std::string(e.what()) + " - Invalid value for " + cfgKey );
           }
         }
+        
         else
         {
           for (auto c: cfgKey) 
