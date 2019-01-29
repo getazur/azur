@@ -164,6 +164,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 
 const char* const SEED_NODES[] = {
   "daemon-1.getazur.org:15250",
-  "daemon-2.getazur.org:15250"
+  "daemon-2.getazur.org:15250",
+  "daemon-3.getazur.org:15250",
+  "daemon-4.getazur.org:15250"
 };
 } // CryptoNote
