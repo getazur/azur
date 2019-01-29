@@ -140,8 +140,8 @@ add_dependencies(cryptotest version)
 
 # Finally build the binaries
 set_property(TARGET azurd PROPERTY OUTPUT_NAME "azurd")
-set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "walletd")
-set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "walletd-beta")
+set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "wallet")
+set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "wallet-beta")
 set_property(TARGET service PROPERTY OUTPUT_NAME "azur-rpc")
 set_property(TARGET miner PROPERTY OUTPUT_NAME "miner")
 set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "test")
